@@ -15,3 +15,23 @@
 .sidebar2.dark li:first-child {
     border-top: none;
 }
+
+.sidebar2.dark ul.d-menu li:first-child {
+    border-top: 1px solid #5c5c5c;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-left .tile-wide {
+    float: none;
+}
+
+.tile-subtitle {
+    left: 5px;
+}
+
+.margin5 {
+    margin: 5px !important;
+}
