@@ -35,3 +35,7 @@
 .margin5 {
     margin: 5px !important;
 }
+
+.white-border {
+    text-shadow: 0 0 2px #fff;
+}
