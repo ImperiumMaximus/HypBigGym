@@ -15,6 +15,7 @@ function scelta(){
         success: function(data) {
             var result = JSON.parse(data);
             console.log(result);
+            $(".courses").empty();
             
             for (var i = 0; i < result.length; i++) {
                 var elCour = "";
@@ -32,6 +33,7 @@ function scelta(){
         success: function(data) {
             var result = JSON.parse(data);
             console.log(result);
+            $(".courses").empty();
             
             for (var i = 0; i < result.length; i++) {
                 var elCour = "";
