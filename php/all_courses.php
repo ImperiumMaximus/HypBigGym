@@ -8,14 +8,18 @@ if ($mysqli->connect_error) {
     die("Connect failed: " . $mysqli->connect_error);
 }
 
-$choice = ?_GET['order'];
+$choice = $_GET['order'];
 
-if($choice = alphabetic) {
-    $queryCourses = "SELECT 'name',FROM 'all_courses',ORDERED BY 'name'";
+if($choice == "alphabetic") {
+    $queryCourses = "SELECT 'name' FROM 'all_courses' ORDER BY 'name'";
 }
 
-else if($choice = level) {
-    $queryCourses = "SELECT 'name',FROM 'all_courses',ORDERED BY 'level'";
+else if($choice == "level") {
+    $queryCourses = "SELECT 'name' FROM 'all_courses' ORDER BY 'level'";
+}
+
+else{
+    die("Connect failed: " . $mysqli->connect_error);
 }
 
 $courses = $mysqli->query($queryCourses);
