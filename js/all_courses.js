@@ -13,6 +13,7 @@ function scelta(){
     jQuery.ajax({
         url: 'http://hypbiggym.altervista.org/php/all_courses.php?order=alphabetic',
         success: function(data) {
+            console.log(data);
             var result = JSON.parse(data);
             console.log(result);
             $(".courses").empty();
@@ -31,6 +32,7 @@ function scelta(){
         jQuery.ajax({
         url: 'http://hypbiggym.altervista.org/php/all_courses.php?order=level',
         success: function(data) {
+            console.log(data);
             var result = JSON.parse(data);
             console.log(result);
             $(".courses").empty();
