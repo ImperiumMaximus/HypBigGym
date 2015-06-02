@@ -1,10 +1,14 @@
 
-jQuery.(document).ready(function () {
+jQuery(document).ready(function () {
     "use strict";
     var ElementHtml = "<ul></ul>";
     console.log("Here");
-    
-function scelta(decisione){
+        
+});
+
+function scelta(){
+    console.log(jQuery("#criteria").val());
+    var decisione = jQuery("#criteria").val();
  
     if(decisione == 'alphabetic'){
     jQuery.ajax({
@@ -27,5 +31,3 @@ function scelta(decisione){
     }
 
 }
-    
-});
