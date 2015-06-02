@@ -21,7 +21,7 @@ function scelta(){
             for (var i = 0; i < result.length; i++) {
                 var elCour = "";
                 console.log(result[i]);
-                elCour += "<li>" + result[i].name + "</li>";
+                elCour += "<li><a href=" + result[i].link + ">" + result[i].name + "</a></li>";
                 jQuery(".courses").append(elCour);
             }
 }
@@ -40,7 +40,7 @@ function scelta(){
             for (var i = 0; i < result.length; i++) {
                 var elCour = "";
                 console.log(result[i]);
-                elCour += "<li>" + result[i].name + "</li>";
+                elCour += "<li><a href=" + result[i].link + ">" + result[i].name + "</a></li>";
                 jQuery(".courses").append(elCour);
             }
             

@@ -11,11 +11,11 @@ if ($mysqli->connect_error) {
 $choice = $_GET['order'];
 
 if($choice == "alphabetic") {
-    $queryCourses = "SELECT `name` FROM `all_courses` ORDER BY `name`";
+    $queryCourses = "SELECT `name`,`link` FROM `all_courses` ORDER BY `name`";
 }
 
 else if($choice == "level") {
-    $queryCourses = "SELECT `name` FROM `all_courses` ORDER BY `level`";
+    $queryCourses = "SELECT `name`,`link` FROM `all_courses` ORDER BY `level`";
 }
 
 else{
