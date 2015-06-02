@@ -18,4 +18,8 @@ while(($row = $categories->fetch_assoc())) {
 
 echo json_encode($rows);
 
+$categories->close();
+
+$mysqli->close();
+
 ?>
