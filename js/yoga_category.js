@@ -7,7 +7,8 @@ jQuery(document).ready(function () {
             console.log(data);
             var result = JSON.parse(data);
             var catCourse = "";
-            catCourse += "<option value = '" + result[i].name + "'>" + result[i].name + "</option>";
+            for(var i=0; i<result.length;i++)
+            {catCourse += "<option value = '" + result[i].name + "'>" + result[i].name + "</option>";}
             jQuery("#criteria").append(catCourse);
             
         }
