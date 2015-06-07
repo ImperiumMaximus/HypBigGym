@@ -8,7 +8,7 @@ if ($mysqli->connect_error) {
     die("Connect failed: " . $mysqli->connect_error);
 }
 
-$idChoose = $mysqli->real_escape_string($_GET['categoryId']);
+$idChoose = $mysqli->real_escape_string($_GET['id']);
 
 $queryListCategory = "SELECT `name` FROM `category` WHERE `category` = '$idChoose'";
 
