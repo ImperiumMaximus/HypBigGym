@@ -8,15 +8,15 @@ if ($mysqli->connect_error) {
     die("Connect failed: " . $mysqli->connect_error);
 }
 
-$idChoose = $_GET['categoryId'];
+$idChoose = $mysqli->real_escape_string($_GET['categoryId']);
 
-$queryListCategory = "SELECT `name` FROM `category` WHERE `category` = $idChoose";
+$queryListCategory = "SELECT `name` FROM `category` WHERE `category` = '$idChoose'";
 
 $listCategory = $mysqli->query($queryListCategory);
 
 $rows = array();
 
-while (($row = $courses->fetch_assoc())) {
+while (($row = $listCategory->fetch_assoc())) {
     $rows[] = $row;
                         
 }
