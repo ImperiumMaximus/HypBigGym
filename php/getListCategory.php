@@ -23,6 +23,8 @@ while (($row = $listCategory->fetch_assoc())) {
 
 echo json_encode($rows);
 
+$idChoose->close();
+
 $listCategory->close();
 
 $mysqli->close();
