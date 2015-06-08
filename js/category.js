@@ -27,7 +27,7 @@ function scelta() {
         success: function(data) {
             console.log(data);
             var result = JSON.parse(data);
-            console.log(result2);
+            console.log(result);
             $(".description").empty();
             $("#button").empty();
             
@@ -35,7 +35,7 @@ function scelta() {
                 var courseChosen = "<p>" + result[i].description + "</p>";
                 jQuery(".description").append(courseChosen);  
             
-                var courseLink = "<a href=" + result[i].link + "><button class=button>Go to course page</button></a>";
+                var courseLink = "<center><a href=" + result[i].link + "><button class=button>Go to course page</button></a></center>";
                 jQuery("#button").append(courseLink);
                 
             }           

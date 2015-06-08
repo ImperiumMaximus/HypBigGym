@@ -25,7 +25,6 @@ while (($row = $category->fetch_assoc())) {
 
 echo json_encode($rows);
 
-$id_category->close();
 
 $category->close();
 
