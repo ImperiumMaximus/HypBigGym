@@ -12,7 +12,7 @@ $id_category = $mysqli->real_escape_string($_GET['id']);
 
 $selected_course = $_GET['course'];
 
-$queryCategory = "SELECT `name`,`description`,`link` FROM `category` WHERE category = '$id_category' AND name = '$selected_course'";
+$queryCategory = "SELECT `all_courses`.`name`,`category`.`description`,`all_courses`.`link` FROM `category` INNER JOIN `all_courses` ON `all_courses`.`name` = `category`.`name` WHERE category = '$id_category' AND `category`.`name` = '$selected_course'";
 
 $category = $mysqli->query($queryCategory);
 
