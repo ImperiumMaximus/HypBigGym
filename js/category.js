@@ -14,7 +14,7 @@ jQuery(document).ready(function () {
             jQuery("#criteria").append(catCourse);
             
         }
-            });
+    });
 });
 
 function scelta() {
@@ -22,8 +22,9 @@ function scelta() {
     var decisione = jQuery("#criteria").val();
     
     jQuery.ajax({
-        url: 'http://hypbiggym.altervista.org/php/getCategory.php?course='+ decisione,
-        data: {id: categoryId},
+        url: 'http://hypbiggym.altervista.org/php/getCategory.php',
+        data: {id: categoryId,
+              course: decisione},
         success: function(data) {
             console.log(data);
             var result = JSON.parse(data);
