@@ -23,7 +23,7 @@ function fillCourses() {
             var result = JSON.parse(data);
             console.log(result);
             for(var i = 0; i < result.length; i++) {
-                jQuery("#courses").append(jQuery("<li></li>").append(jQuery("<a></a>").attr("href", result[i].link).html(result[i].name)));
+                jQuery("#courses").append(jQuery("<li></li>").append(jQuery("<a></a>").attr({href: result[i].link, class: "fg-white"}).html(result[i].name)));
             }
         }
     });
