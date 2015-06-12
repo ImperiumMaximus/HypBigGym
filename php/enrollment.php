@@ -10,14 +10,14 @@ if ($mysqli->connect_error) {
 
 $id = $mysqli->real_escape_string($_GET['id']);
 
-$queryDate = "SELECT `day`,`start_time` FROM `courses_schedule` WHERE `course_name` = $id"
+$queryDate = "SELECT `day`,`start_time` FROM `courses_schedule` WHERE `course_name` = '$id'";
     
 $date = $mysqli->query($queryDate);    
 
 $rows = array();
 
 while (($row = $date->fetch_assoc())) {
-    $rows[] = $row;
+    $rows[$row['day']][] = $row['start_time'];
                         
 }
 
