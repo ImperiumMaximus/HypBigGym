@@ -17,7 +17,7 @@ $date = $mysqli->query($queryDate);
 $rows = array();
 
 while (($row = $date->fetch_assoc())) {
-    $rows = $row;
+    $rows[] = $row;
                         
 }
 
