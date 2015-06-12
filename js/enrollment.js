@@ -21,6 +21,7 @@ jQuery(document).ready(function () {
 function scelta() {
     console.log(jQuery("#criteria1").val());
     var decisione = jQuery("#criteria1").val();
+    console.log(decisione);
     
     jQuery("#criteria2").empty();
     
@@ -28,11 +29,10 @@ function scelta() {
         url: 'http://hypbiggym.altervista.org/php/enrollment.php',
         data: {id: course},
         success: function (data) {
-            console.log(data);
             var result = JSON.parse(data);
+            result.splice(decisione, 1);
             var date = "<option value='' selected>Select a second date (optional)</option>";
-            for(var j=decisione; j<result.length;j++) {
-                j++;
+            for(var j=0; j<result.length;j++) {
                 date += "<option value = '" + j + "'>" + result[j].day + " " + result[j].start_time + "</option>";
             }
             
