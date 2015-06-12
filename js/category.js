@@ -36,7 +36,7 @@ function scelta() {
                 var courseChosen = "<p>" + result[i].description + "</p>";
                 jQuery(".description").append(courseChosen);  
             
-                var courseLink = "<center><a href=" + result[i].link + "><button class=button>Go to course page</button></a></center>";
+                var courseLink = "<center><a href=" + result[i].link + " class='fg-white'><button class=button>Go to course page</button></a></center>";
                 jQuery("#button").append(courseLink);
                 
             }           

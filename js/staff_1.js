@@ -8,7 +8,7 @@ jQuery(document).ready(function () {
             var result = JSON.parse(data);
             var instructors = "";
             for(var i=0; i<result.length;i++) {
-                instructors += "<a href ='" + result[i].link_instr + "'><p>" + result[i].name + " " + result[i].surname + "</p></a>";
+                instructors += "<a href ='" + result[i].link_instr + "' class='fg-white'><p>" + result[i].name + " " + result[i].surname + "</p></a>";
             }
             
             jQuery("#instructors").append(instructors);
