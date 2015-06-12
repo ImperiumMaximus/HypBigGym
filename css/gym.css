@@ -46,19 +46,11 @@
 
 .tabcontrol .tabs li a {
     color: white;
-    border-color: #5c5c5c;
-    border-style: solid;
-    border-width: 1px 1px 0px 0px;
-}
-
-.tabcontrol .tabs li:first-child a {
-    border-left-width: 1px;
 }
 
 
 .tabcontrol .tabs li.active a {
     background-color: #ce352c;
-    border-color: #ce352c;
 }
 
 .tabcontrol .tabs li.active:hover a {
@@ -72,9 +64,6 @@
 
 .tabcontrol .frames .frame {
     background: transparent;
-    border-color: #5c5c5c;
-    border-style: solid;
-    border-width: 0px 1px 1px 1px;
 }
 
 .tabcontrol .tabs {
@@ -84,6 +73,30 @@
 
 .numeric-list>li:before {
     background-color: #5c5c5c;
+}
+
+ul.inline {
+    padding-left: 0px;
+    margin-top: 0px;
+}
+
+ul.inline li {
+    display: inline-block;
+}
+
+ul.inline li::after {
+    padding-left: 5px;
+    content: '|';
+    position: relative;
+    top: -1px;
+}
+
+ul.inline li:last-child::after {
+    content: '';
+}
+
+.numeric-list li:before, .simple-list li:before {
+    color: white;
 }
 
 .banner{
