@@ -85,3 +85,38 @@
 .numeric-list>li:before {
     background-color: #5c5c5c;
 }
+
+.banner{
+    padding-bottom: 15px;
+}
+
+.title_padding{
+    padding-bottom: 20px;
+}
+
+.return_padding{
+    padding-bottom: 30px;
+}
+
+.choice{
+    margin-bottom:25px;
+}
+
+button_padding{
+    padding-bottom: 50px;
+}
+
+.text_padding{
+    margin-bottom: 45px;
+}
+
+.description{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 100px;
+}
+
+.choice_course{
+    margin-left: 50px;
+    margin-top: 50px;
+}
