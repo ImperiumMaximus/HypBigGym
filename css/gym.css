@@ -39,3 +39,49 @@
 .white-border {
     text-shadow: 0 0 2px #fff;
 }
+
+.tabcontrol .tabs li:hover a {
+    background-color: #262626;
+}
+
+.tabcontrol .tabs li a {
+    color: white;
+    border-color: #5c5c5c;
+    border-style: solid;
+    border-width: 1px 1px 0px 0px;
+}
+
+.tabcontrol .tabs li:first-child a {
+    border-left-width: 1px;
+}
+
+
+.tabcontrol .tabs li.active a {
+    background-color: #ce352c;
+    border-color: #ce352c;
+}
+
+.tabcontrol .tabs li.active:hover a {
+    color: white;
+}
+
+
+.numeric-list li, .simple-list li {
+    color: white;
+}
+
+.tabcontrol .frames .frame {
+    background: transparent;
+    border-color: #5c5c5c;
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+}
+
+.tabcontrol .tabs {
+    border-bottom: 2px #5c5c5c solid;
+}
+
+
+.numeric-list>li:before {
+    background-color: #5c5c5c;
+}

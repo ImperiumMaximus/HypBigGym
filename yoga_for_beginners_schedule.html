@@ -1,20 +1,21 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Category: Yoga</title>
+    <head>
+        <title></title>
         <link rel="stylesheet" href="css/metro.min.css" type="text/css"/>
         <link rel="stylesheet" href="css/metro-icons.min.css" type="text/css"/>
-        <link rel="stylesheet" href="css/category.css" type="text/css"/>
         <link rel="stylesheet" href="css/gym.css" type="text/css"/>
         <script type="text/javascript">
-                var categoryId = 'Yoga';
-            </script>
+            var courseName = "Yoga for Beginners";
+            var courseLevel = "principiante";
+        </script>
         <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
         <script type="text/javascript" src="js/metro.min.js"></script>
-        <script type="text/javascript" src="js/category.js"></script>
+        <script type="text/javascript" src="js/schedule.js"></script>
     </head>
     <body class="bg-dark fg-white">
         
-        <div class="grid"><div class="row"><div class="cell banner"><center><img src="img\banner_palestra.png"/></center></div></div></div>
+         <div class="grid"><div class="row"><div class="cell banner"><center><img src="img\banner_palestra.png"/></center></div></div></div>
         
         <div class="grid condensed no-margin">
             <div class="row cells4">
@@ -26,6 +27,13 @@
                                </span>
                                Homepage
                            </a>
+                       </li>
+                       <li class="active">
+                           <a class="dropdown-toggle" href="#">Yoga for Beginners</a>
+                           <ul class="d-menu" data-role="dropdown">
+                               <li><a href="yoga_for_beginners.html">Description</a></li>
+                               <li><a href="yoga_for_beginners_enrollment.html">Enrollment</a></li>
+                           </ul>
                        </li>
                        <li>
                            <a href="#">
@@ -105,18 +113,23 @@
                            </a>
                        </li>
                    </ul>
-                </div>
-        <div class="cell colspan3">
-            <h1 class="no-margin-top leader title_padding">Category: yoga</h1>
-            <div class="return_padding"><a href="all_course_categories.html"><p>Return to all categories</p></a></div>
-            
-            <div class="input-control select choice">
-                <select id="criteria" onChange="scelta()">
-                    <option value="" selected>Select</option>
-                </select>
-            </div>
-            <div class="description"></div>
-            <div id="button"></div>
+                </div> 
+                <div class="cell colspan3">
+                    <div class="content"></div>
+                    <h1 id="title"></h1>
+                    <div class="tabcontrol padding10" id="tabcontrol">
+                        <ul class="tabs">
+                            <!--<li><a href="#frame_monday">Monday</a></li>
+                            <li><a href="#frame_tuesday">Tuesday</a></li>
+                            <li><a href="#frame_wednesday">Wednesday</a></li>-->
+                        </ul>
+                        
+                        <div class="frames">
+                            <!--<div class="frame" id="frame_monday">bla bla</div>
+                            <div class="frame" id="frame_tuesday">bla2 bla2</div>
+                            <div class="frame" id="frame_wednesday">bla3 bla3</div>-->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
