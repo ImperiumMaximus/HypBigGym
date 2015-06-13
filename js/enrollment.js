@@ -4,11 +4,11 @@ jQuery(document).ready(function () {
         url: 'http://hypbiggym.altervista.org/php/enrollment.php',
         data: {id: course},
         success: function (data) {
-            console.log(data);
             var result = JSON.parse(data);
+            console.log(result);
             var date = "";
             for(var i=0; i<result.length;i++) {
-                date += "<option value = " + result[i].id + ">" + result[i].day + " " + result[i].start_time + "</option>";
+                date += "<option value='" + result[i].id + "'>" + result[i].day + " " + result[i].start_time + "</option>";
             }
             
             jQuery("#criteria1").append(date);
@@ -20,8 +20,8 @@ jQuery(document).ready(function () {
 
 function scelta() {
     console.log(jQuery("#criteria1").val());
-    var decisione = jQuery("#criteria1").val();
-    console.log("decisione è "+decisione)
+    var decisione = parseInt(jQuery("#criteria1").val());
+    console.log("decisione is "+decisione)
     jQuery("#criteria2").empty();
     
     jQuery.ajax({
@@ -32,8 +32,8 @@ function scelta() {
             var result = JSON.parse(data);
             var date = "<option value='' selected>Select a second date (optional)</option>";
             for(var i = 0; i<result.length;i++) {
-                if(result[i].id > decisione) {
-                    console.log("result è "+result[i].id);
+                if(parseInt(result[i].id) > decisione) {
+                    console.log("result is "+result[i].id);
                     date += "<option value = '" + result[i].id + "'>" + result[i].day + " " + result[i].start_time + "</option>";
                 }
             }
