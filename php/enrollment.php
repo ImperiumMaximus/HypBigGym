@@ -10,7 +10,7 @@ if ($mysqli->connect_error) {
 
 $id = $mysqli->real_escape_string($_GET['id']);
 
-$queryDate = "SELECT `day`,`start_time` FROM `courses_schedule` WHERE `course_name` = '$id'";
+$queryDate = "SELECT `id`,`day`,`start_time` FROM `courses_schedule` WHERE `course_name` = '$id' ORDER BY `id`";
     
 $date = $mysqli->query($queryDate);    
 
