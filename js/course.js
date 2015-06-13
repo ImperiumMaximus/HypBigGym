@@ -1,6 +1,5 @@
 jQuery(document).ready(function () {
     "use strict";
-    jQuery(".carousel").carousel();
     
     jQuery.ajax({
         url: 'http://hypbiggym.altervista.org/php/getCourse.php',
@@ -17,6 +16,12 @@ jQuery(document).ready(function () {
             for (var i = 0; i < images.length; i++) {
                 jQuery(images[i]).attr("src", imgs_paths[i]);
             }
+            
+            var carWidth = Math.min(350, jQuery(window).width() - 32);
+            var carHeight = carWidth * 0.5714;
+            jQuery("#course-carousel").attr({"data-width": carWidth, "data-height": carHeight}); 
+            
+            jQuery(".carousel").carousel();
             
         }
     });
