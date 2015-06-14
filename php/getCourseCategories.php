@@ -7,7 +7,7 @@ if ($mysqli->connect_error) {
     die("Connect failed: " . $mysqli->connect_error);
 }
 
-$queryCategories = "SELECT `name`,`main_photo`,`list_link` FROM `course_categories`";
+$queryCategories = "SELECT `name`,`main_photo` FROM `course_categories`";
 $categories = $mysqli->query($queryCategories);
 
 $rows = array();
