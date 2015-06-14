@@ -23,6 +23,11 @@ jQuery(document).ready(function () {
             
             jQuery(".carousel").carousel();
             
+            jQuery("#schedule").attr("href", "schedule.html?course=" + encodeURIComponent(courseName) + "&level=" + encodeURIComponent(courseLevel) + "&category=" + encodeURIComponent(result.category));
+            jQuery("#enrollment").attr("href", "enrollment.html?course=" + encodeURIComponent(courseName)  + "&level=" + encodeURIComponent(courseLevel) + "&category=" + encodeURIComponent(result.category));
+            jQuery("#instructors").attr("href", "instructors.html?course=" + encodeURIComponent(courseName) + "&level=" + encodeURIComponent(courseLevel));
+            jQuery("#category").attr("href", "category.html?name=" + encodeURIComponent(result.category));
+             
         }
     });
 });
