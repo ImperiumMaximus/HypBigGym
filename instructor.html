@@ -1,21 +1,22 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Yoga for beginners' instructors</title>
-    <link rel="stylesheet" href="css/metro.min.css" type="text/css"/>
-    <link rel="stylesheet" href="css/metro-icons.min.css" type="text/css"/>
-    <link rel="stylesheet" href="css/gym.css" type="text/css"/>
-    <link rel="stylesheet" href="css/responsive.css" type="text/css"/>
-        
-        <script type="text/javascript">
-                var course = 'Pilates for Intermediate';
-            </script>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="css/metro.min.css" type="text/css"/>
+        <link rel="stylesheet" href="css/metro-icons.min.css" type="text/css"/>
+        <link rel="stylesheet" href="css/gym.css" type="text/css"/>
+        <link rel="stylesheet" href="css/responsive.css" type="text/css"/>
         <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
         <script type="text/javascript" src="js/metro.min.js"></script>
-        <script type="text/javascript" src="js/staff_1.js"></script>
+        <script type="text/javascript" src="js/url_params.js"></script>
+        <script type="text/javascript">
+            var instrId = parse("id");
+        </script>
+        <script type="text/javascript" src="js/instructor.js"></script>
     </head>
-<body class="bg-dark fg-white">
-     
-        <div class="grid"><div class="row"><div class="cell banner"><center><img src="img\banner_palestra.png"/></center></div></div></div>
+    <body class="bg-dark fg-white">
+        
+         <div class="grid"><div class="row"><div class="cell banner"><center><img src="img/banner_palestra.png"/></center></div></div></div>
         
         <div class="grid condensed no-margin">
             <div class="row cells4">
@@ -106,13 +107,34 @@
                            </a>
                        </li>
                    </ul>
-                </div>
-        <div class="cell colspan3">
-            <h1 class="no-margin-top leader title_padding">Pilates for intermediate's instructors</h1>
-            <div class="return_padding"><a href="pilates_for_intermediate.html" class="fg-white"><p>Return to pilates for intermediate</p></a></div>
-            <div id="instructors"><p>Select one of the instructors of this course:</p></div>               
+                </div> 
+                <div class="cell colspan3">
+                    <h1 id="title"></h1>
+                    <ul class="inline">
+                                    <li><a class="fg-white" href="#">All instructors</a></li>
+                                    <li><a class="fg-white" href="#">Return to instructor of the month</a></li>
+                                </ul>
+                    <div class="grid">
+                        <div class="row cells2">
+                            <h4>Biography</h4>
+                            <div class="cell padding10">
+                                <div id="bio"></div>
+                            </div>
+                            <div class="cell padding10">
+                                <p>
+                                <img id="photo"/>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cell padding10">
+                            <div class="cell">
+                                <h4>Courses held by this instructor:</h4>
+                                <ul id="courses" class="simple-list"></ul>
+                            </div>            
+                        </div>
+                    </div>
                 </div>
             </div>
-    </div>
+        </div>
     </body>
 </html>

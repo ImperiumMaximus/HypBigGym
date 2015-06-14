@@ -1,16 +1,17 @@
 <html>
 <head>
-    <title>Category: Yoga</title>
+    <title></title>
         <link rel="stylesheet" href="css/metro.min.css" type="text/css"/>
         <link rel="stylesheet" href="css/metro-icons.min.css" type="text/css"/>
         <link rel="stylesheet" href="css/gym.css" type="text/css"/>
     <link rel="stylesheet" href="css/responsive.css" type="text/css"/>
     
-        <script type="text/javascript">
-                var categoryId = 'Pilates';
-            </script>
         <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
         <script type="text/javascript" src="js/metro.min.js"></script>
+        <script type="text/javascript" src="js/url_params.js"></script>
+        <script type="text/javascript">
+                var categoryId = parse("name");
+            </script>
         <script type="text/javascript" src="js/category.js"></script>
     </head>
     <body class="bg-dark fg-white">
@@ -108,7 +109,7 @@
                    </ul>
                 </div>
         <div class="cell colspan3">
-            <h1 class="no-margin-top leader title_padding">Category: pilates</h1>
+            <h1 id="title" class="no-margin-top leader title_padding"></h1>
             <div class="return_padding"><a href="all_course_categories.html" class="fg-white"><p>Return to all categories</p></a></div>
             
             <div class="input-control select choice">

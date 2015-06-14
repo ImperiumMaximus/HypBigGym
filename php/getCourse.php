@@ -10,7 +10,7 @@ if ($mysqli->connect_error) {
 $name = $mysqli->real_escape_string($_GET['name']);
 $level = $mysqli->real_escape_string($_GET['level']);
 
-$queryCourse = "SELECT * FROM `all_courses` WHERE `name` = '$name' AND `level` = '$level'";
+$queryCourse = "SELECT `all_courses`.`name`,`all_courses`.`description`,`photos`,`category`.`category` FROM `all_courses` INNER JOIN `category` ON `all_courses`.`name` = `category`.`name` WHERE `all_courses`.`name` = '$name' AND `level` = '$level'";
 $course = $mysqli->query($queryCourse);
 
 $row = $course->fetch_assoc();

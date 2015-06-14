@@ -28,6 +28,12 @@ jQuery(document).ready(function () {
             }
             
             jQuery("#tabcontrol").tabControl();
+            
+            jQuery("#description").attr("href", "course.html?name=" + encodeURIComponent(courseName) + "&level=" + encodeURIComponent(courseLevel));
+            jQuery("#enrollment").attr("href", "enrollment.html?course=" + encodeURIComponent(courseName) + "&level=" + encodeURIComponent(courseLevel) + "&category=" + encodeURIComponent(category));
+            
+            jQuery("#instructors").attr("href", "instructors.html?course=" + encodeURIComponent(courseName) + "&level=" + encodeURIComponent(courseLevel));
+            jQuery("#category").attr("href", "category.html?name=" + encodeURIComponent(category));
         }
     });
 });

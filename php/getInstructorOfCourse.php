@@ -9,7 +9,7 @@ if ($mysqli->connect_error) {
 
 $id = $mysqli->real_escape_string($_GET['id']);
 
-$queryInstructor = "SELECT `instructors`.`name`,`instructors`.`surname`,`instructors`.`link_instr` FROM `instructors` INNER JOIN `teaches` ON `instructors`.`id` = `teaches`.`instr_id` WHERE `teaches`.`course_name` = '$id'";
+$queryInstructor = "SELECT `instructors`.`name`,`instructors`.`surname`,`instructors`.`id` FROM `instructors` INNER JOIN `teaches` ON `instructors`.`id` = `teaches`.`instr_id` WHERE `teaches`.`course_name` = '$id'";
 $instructor = $mysqli->query($queryInstructor);
 
 $rows = array();

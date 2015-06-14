@@ -6,12 +6,14 @@
         <link rel="stylesheet" href="css/metro-icons.min.css" type="text/css"/>
         <link rel="stylesheet" href="css/gym.css" type="text/css"/>
         <link rel="stylesheet" href="css/responsive.css" type="text/css"/>
-        <script type="text/javascript">
-            var courseName = "Pilates for Intermediate";
-            var courseLevel = "intermedio";
-        </script>
+        
         <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
         <script type="text/javascript" src="js/metro.min.js"></script>
+        <script type="text/javascript" src="js/url_params.js"></script>
+        <script type="text/javascript">
+            var courseName = parse("name");
+            var courseLevel = parse("level");
+        </script>
         <script type="text/javascript" src="js/course.js"></script>
     </head>
     <body class="bg-dark fg-white">
@@ -112,12 +114,12 @@
                     <h1 id="title"></h1>
                     <ul class="inline">
                         <li><a class="fg-white" href="all_courses.html">Return to all courses</a></li>
-                                <li><a class="fg-white" href="pilates_category.html">All courses of the same category</a></li>
+                                <li><a id="category" class="fg-white">All courses of the same category</a></li>
                     </ul>
                     <div class="grid">
                         <div class="row cells1">
                             <div class="cell padding10">
-                                <div id="course-carousel" class="carousel margin10" style="float: right">
+                                <div  id="course-carousel" class="carousel margin10"  style="float: right">
                                     <div class="slide">
                                         <img id="imgs"/>
                                     </div>
@@ -136,15 +138,15 @@
                                 </div>
                                 <div id="description"></div>
                                 <h4>See also:</h4>
+                    <ul class="inline">
+                                <li><a id="schedule" class="fg-white" >Schedule</a></li>
+                                <li><a id="enrollment" class="fg-white" >Enrollment</a></li>
+                                    </ul>
+                    <h4>Other links:</h4>
                                 <ul class="inline">
-                                    <li><a class="fg-white" href="pilates_for_intermediate_schedule.html">Schedule</a></li>
-                                    <li><a class="fg-white" href="pilates_for_intermediate_enrollment.html">Enrollment</a></li>
-                                </ul>
-                                <h4>Other links:</h4>
-                                <ul class="inline">
-                                    <li><a class="fg-white" href="pilates_for_intermediate_instructors.html">Instructors of this course</a></li>
+                                    <li><a id="instructors" class="fg-white">Instructors of this course</a></li>
                                     <li><a href="#" class="fg-white">Room of this course</a></li>
-                                    <li><a href="#" class="fg-white">Pilates description</a></li>
+                                    <li><a href="#" class="fg-white">Description of course category</a></li>
                                 </ul>
                             </div>
                         </div>

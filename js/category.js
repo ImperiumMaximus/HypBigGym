@@ -1,5 +1,7 @@
 jQuery(document).ready(function () {
     "use strict";     
+    jQuery("#title").html("Category: " + categoryId);
+    document.title = "Category: " + categoryId;
     jQuery.ajax({
         url: 'http://hypbiggym.altervista.org/php/getListCategory.php',
         data: {id: categoryId},
@@ -36,7 +38,7 @@ function scelta() {
                 var courseChosen = "<p>" + result[i].description + "</p>";
                 jQuery(".description").append(courseChosen);  
             
-                var courseLink = "<center><a href=" + result[i].link + " class='fg-white'><button class=button>Go to course page</button></a></center>";
+                var courseLink = "<center><a href=course.html?name=" + encodeURIComponent(result[i].name) + "&level=" + encodeURIComponent(result[i].level) + " class='fg-white'><button class=button>Go to course page</button></a></center>";
                 jQuery("#button").append(courseLink);
                 
             }           

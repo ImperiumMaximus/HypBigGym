@@ -11,7 +11,8 @@ function scelta(){
  
     if(decisione == 'alphabetic'){
     jQuery.ajax({
-        url: 'http://hypbiggym.altervista.org/php/all_courses.php?order=alphabetic',
+        url: 'http://hypbiggym.altervista.org/php/all_courses.php',
+        data: {order: "alphabetic"},
         success: function(data) {
             console.log(data);
             var result = JSON.parse(data);
@@ -21,7 +22,7 @@ function scelta(){
             for (var i = 0; i < result.length; i++) {
                 var elCour = "";
                 console.log(result[i]);
-                elCour += "<li><a class=\"fg-white\" href=" + result[i].link + ">" + result[i].name + "</a></li>";
+                elCour += "<li><a class=\"fg-white\" href=course.html?name=" + encodeURIComponent(result[i].name) + "&level=" + encodeURIComponent(result[i].level) + ">" + result[i].name + "</a></li>";
                 jQuery(".courses").append(elCour);
             }
 }
@@ -30,7 +31,8 @@ function scelta(){
     
     else if(decisione == 'level'){
         jQuery.ajax({
-        url: 'http://hypbiggym.altervista.org/php/all_courses.php?order=level',
+        url: 'http://hypbiggym.altervista.org/php/all_courses.php?',
+        data: {order: "level"},
         success: function(data) {
             console.log(data);
             var result = JSON.parse(data);
@@ -40,7 +42,7 @@ function scelta(){
             for (var i = 0; i < result.length; i++) {
                 var elCour = "";
                 console.log(result[i]);
-                elCour += "<li><a class=\"fg-white\" href=" + result[i].link + " class='fg-white'>" + result[i].name + "</a></li>";
+                elCour += "<li><a class=\"fg-white\" href=course.html?name=" + encodeURIComponent(result[i].name) + "&level=" + encodeURIComponent(result[i].level) + " class='fg-white'>" + result[i].name + "</a></li>";
                 jQuery(".courses").append(elCour);
             }
             

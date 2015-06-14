@@ -12,7 +12,7 @@ jQuery(document).ready(function () {
                 var elCat = jQuery(elementHtml);
                 elCat.find(".cat-title").html("<b>" + result[i].name + "</b>");
                 elCat.find(".cat-img").attr("src", result[i].main_photo);
-                elCat.find(".cat-list-link").attr("href", result[i].list_link);
+                elCat.find(".cat-list-link").attr("href", "category.html?name=" + encodeURIComponent(result[i].name));
                 jQuery("#content").append(elCat);
             }
         }
